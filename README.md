@@ -1,65 +1,63 @@
-# docker-dotnet-sample
-<style>
-    .nav-section {
-        margin-bottom: 20px; 
-    }
+.nav-section {
+    margin-bottom: 20px; 
+}
 
-    .nav-link p {
-        font-size:0.9rem;
-        margin: 0; 
-        padding: 5px 0 5px 0; 
-        font-weight:bold;
-    }
+.nav-link p {
+    font-size: 0.9rem;
+    margin: 0; 
+    padding: 5px 0 5px 0; 
+    font-weight: bold;
+}
 
-    .nav-link.active p {
-        color: #0d6efd; 
-    }
+.nav-link.active p {
+    color: #0d6efd; 
+}
 
-    .nav-link:hover p {
-        color: #0d6efd;
-    }
+.nav-link:hover p {
+    color: #0d6efd;
+}
 
-    .e-treeview .e-list-item {
-        font-size: 0.9rem;
-        margin: 0;
-        padding: 5px 0 5px 0;
-        font-weight: 500; 
-        color: black; 
-        cursor: pointer;
-    }
+/* TreeView Styles */
+.e-treeview .e-list-item {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 5px 0 5px 0;
+    font-weight: 500; 
+    color: black; 
+    cursor: pointer;
+}
 
-    .e-treeview .e-list-item .e-fullrow {
-        background-color: white !important;
-        border: none !important;
-        color: black !important;
-    }
+/* Only the hovered item changes color */
+.e-treeview .e-list-item:hover .e-anchor-wrap {
+    color: #0d6efd; /* Highlight color on hover */
+}
 
-    .e-treeview .e-list-item:hover .e-fullrow {
-        background-color: #e0e0e0 !important;
-        border: none !important;
-        color: black !important;
-    }
+/* Active item styling */
+.e-treeview .e-list-item.e-active .e-anchor-wrap {
+    color: #0d6efd;
+    font-weight: bold;
+}
 
-    .e-treeview .e-list-item:hover .e-anchor-wrap {
-        color: #0d6efd;
-    }
+/* Text content color for active item */
+.e-treeview .e-list-item.e-active > .e-text-content .e-list-text {
+    color: black !important;
+}
 
-    .e-treeview .e-list-item.e-active .e-fullrow {
-        background-color: #0d6efd !important;
-        color: white !important;
-    }
+/* Expand/collapse icon color for active item */
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-collapsible,
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-expandable {
+    color: black !important;
+}
 
-    .e-treeview .e-list-item.e-active .e-anchor-wrap {
-        color: white !important;
-        font-weight: bold;
-    }
+/* General styling to ensure white background and black text */
+.e-treeview, .e-list-item, .e-active > .e-fullrow {
+    background-color: white !important;
+    border: none !important;
+    color: black !important;
+}
 
-    .e-treeview .e-list-item.e-active > .e-text-content .e-list-text {
-        color: white !important;
-    }
-
-    .e-treeview .e-list-item.e-active > .e-text-content .e-icon-collapsible, 
-    .e-treeview .e-list-item.e-active > .e-text-content .e-icon-expandable {
-        color: white !important;
-    }
-</style>
+.e-treeview, .e-list-item, .e-hover > .e-fullrow {
+    background-color: white !important;
+    border: none !important;
+    color: black !important;
+}
