@@ -1,61 +1,56 @@
-/* General styling */
+/* General Styles */
 .nav-section {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .nav-link p {
     font-size: 0.9rem;
-    margin: 0;
-    padding: 5px 0 5px 0;
+    margin: 0; 
+    padding: 5px 0 5px 0; 
     font-weight: bold;
 }
 
-/* Active item styling for NavLinks */
 .nav-link.active p {
-    color: #0d6efd;
+    color: #0d6efd; 
 }
 
 .nav-link:hover p {
     color: #0d6efd;
 }
 
-/* TreeView styling */
-.e-treeview .e-list-item {
+/* TreeView Styles */
+
+/* Base item styles */
+.e-treeview .e-list-item .e-text-content .e-list-text {
     font-size: 0.9rem;
-    margin: 0;
-    padding: 5px 0 5px 0;
     font-weight: 500;
-    color: black;
+    color: black; /* Set base text color */
+}
+
+/* Item container styles */
+.e-treeview .e-list-item {
+    margin: 0;
+    padding: 5px 0;
     cursor: pointer;
+    background-color: white;
+    border: none;
 }
 
-/* Apply white background and black text for all items by default */
-.e-treeview,
-.e-list-item,
-.e-active > .e-fullrow {
-    background-color: white !important;
-    border: none !important;
-    color: black !important;
+/* Hover effect: Only the hovered item changes color */
+.e-treeview .e-list-item:hover .e-text-content .e-list-text {
+    color: #0d6efd; /* Highlight color on hover */
 }
 
-/* Isolate hover styling: Only the hovered item turns blue */
-.e-treeview .e-list-item:hover .e-anchor-wrap {
-    color: #0d6efd; /* Blue text for hovered item */
-}
-
-/* Styling for active (selected) item */
-.e-treeview .e-list-item.e-active .e-anchor-wrap {
-    color: #0d6efd; /* Blue text for active item */
+/* Active item styling: Only the active item is styled */
+.e-treeview .e-list-item.e-active .e-text-content .e-list-text {
+    color: #0d6efd;
     font-weight: bold;
 }
 
-/* Ensuring active item text remains black except for hover/active color */
-.e-treeview .e-list-item.e-active > .e-text-content .e-list-text {
-    color: black !important;
-}
-
-/* Control color of expand/collapse icons only on active item */
-.e-treeview .e-list-item.e-active > .e-text-content .e-icon-collapsible,
-.e-treeview .e-list-item.e-active > .e-text-content .e-icon-expandable {
-    color: black !important;
+/* Remove the color override from general styles */
+.e-treeview, .e-list-item, .e-active > .e-fullrow,
+.e-treeview, .e-list-item, .e-hover > .e-fullrow {
+    background-color: white !important;
+    border: none !important;
+    /* Removed color: black !important; */
 }
