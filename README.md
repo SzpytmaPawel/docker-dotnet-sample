@@ -1,5 +1,4 @@
 # docker-dotnet-sample
-
 <style>
     .nav-section {
         margin-bottom: 20px; 
